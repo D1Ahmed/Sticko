@@ -16,10 +16,8 @@ public class ArmAiming : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
         Vector2 direction = mousePos - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
         float facingDirection = transform.root.localScale.x;
         float finalAngle = angle * facingDirection;
-
         transform.localRotation = Quaternion.Euler(0, 0, finalAngle + rotationOffset);
 
         Vector3 localScale = Vector3.one;
