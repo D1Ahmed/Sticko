@@ -19,9 +19,7 @@ public class ArmAiming : MonoBehaviour
         float facingDirection = transform.root.localScale.x;
         float finalAngle = angle * facingDirection;
         transform.localRotation = Quaternion.Euler(0, 0, finalAngle + rotationOffset);
-
         Vector3 localScale = Vector3.one;
-
         float checkAngle = finalAngle;
         if (checkAngle > 180) checkAngle -= 360;
         if (checkAngle < -180) checkAngle += 360;
