@@ -5,14 +5,11 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 6f;
     public float sprintSpeed = 12f;
     public float jumpForce = 30f;
-
     public float gravityDown = 10f;
     public float gravityUP = 10f;
-
     [Header("Gun System")]
     public bool isArmed = false;
     public GameObject gunPivot;
-
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator anim;
